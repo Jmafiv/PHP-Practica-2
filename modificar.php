@@ -7,34 +7,21 @@
 </head>
 
 <body>
+  <h3>Modificación de datos del artículo</h3>
 
-    <h3>
-
-    Modificación de datos del artículo
-
-  </h3>
-
-  
-
-   
   <table>
-
     <tr><td>Código: </td><td></td></tr>
-
-      <tr><td> Descripción:</td><td> </td></tr>
-
-      <tr><td> Precio de compra: </td><td></td></tr>
-
-      <tr><td> Precio de venta: </td><td></td></tr>
-
-      <tr><td> Stock: </td><td></tr>
-
- <tr><td>
-
-        <input type="submit"  name="accion" value="Modificar">
-
-        <input type="submit"  name="accion" value="Cancelar">
-</td></tr></table>
+    <tr><td> Descripción:</td><td> </td></tr>
+    <tr><td> Precio de compra: </td><td></td></tr>
+    <tr><td> Precio de venta: </td><td></td></tr>
+    <tr><td> Stock: </td><td></tr>
+    <tr><td>
+      <input type="submit"  name="accion" value="Modificar">
+      <input type="submit"  name="accion" value="Cancelar">
+    </td></tr>
+  </table>
+</body>
+</html>
 
   
 
