@@ -27,17 +27,36 @@
         echo "<td>$codigo</td><td>$descripcion</td><td>$precio_compra</td><td>$precio_venta</td><td>$margen</td><td>$stock</td>";
         echo "<td><form action='borrar.php' method='post'>
                   <input id='codigo' name='codigo' type='hidden' value='$codigo'>
+                  <input id='descripcion' name='descripcion' type='hidden' value='$descripcion'>
+                  <input id='precio_compra' name='precio_compra' type='hidden' value='$precio_compra'>
+                  <input id='precio_venta' name='precio_venta' type='hidden' value='$precio_venta'>
+                  <input id='stock' name='stock' type='hidden' value='$stock'>
                   <button type='submit'>Eliminar</button>
                 </form></td>
                 <td><form action='modificar.php' method='post'>
+                <input id='codigo' name='codigo' type='hidden' value='$codigo'>
+                  <input id='descripcion' name='descripcion' type='hidden' value='$descripcion'>
+                  <input id='precio_compra' name='precio_compra' type='hidden' value='$precio_compra'>
+                  <input id='precio_venta' name='precio_venta' type='hidden' value='$precio_venta'>
+                  <input id='stock' name='stock' type='hidden' value='$stock'>
                   <input id='codigo' name='codigo' type='hidden' value='$codigo'>
                   <button type='submit'>Modificar</button>
                 </form></td>						
                 <td><form action='entrada.php' method='post'>
+                <input id='codigo' name='codigo' type='hidden' value='$codigo'>
+                  <input id='descripcion' name='descripcion' type='hidden' value='$descripcion'>
+                  <input id='precio_compra' name='precio_compra' type='hidden' value='$precio_compra'>
+                  <input id='precio_venta' name='precio_venta' type='hidden' value='$precio_venta'>
+                  <input id='stock' name='stock' type='hidden' value='$stock'>
                   <input id='codigo' name='codigo' type='hidden' value='$codigo'>
                   <button type='submit'>Entrada</button>
                 </form></td>						
                 <td><form action='salida.php' method='post'>
+                <input id='codigo' name='codigo' type='hidden' value='$codigo'>
+                  <input id='descripcion' name='descripcion' type='hidden' value='$descripcion'>
+                  <input id='precio_compra' name='precio_compra' type='hidden' value='$precio_compra'>
+                  <input id='precio_venta' name='precio_venta' type='hidden' value='$precio_venta'>
+                  <input id='stock' name='stock' type='hidden' value='$stock'>
                   <input id='codigo' name='codigo' type='hidden' value='$codigo'>
                   <button type='submit'>Salida</button>
               </form></td>					
