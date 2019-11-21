@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -19,9 +17,11 @@
           <tr><td>Precio de venta: </td><td>$precio_venta</td></tr>
           <tr><td>Stock: </td><td>$stock</td></tr>";
       ?>
-    <tr><td>Unidades que salen del almacén: </td><td><input type="number" min="0" name="unidades" ></td></tr>
+      <form method="post">
+       <tr><td>Unidades que salen del almacén: </td><td><input type="number" min="0" <?php echo "max='$stock'" ?>name="unidades" ></td></tr>
          <tr><td><input type="submit" name="accion" value="Salida">             
 			<input type="submit"  name="accion" value="Cancelar"></td>
+      </form>
     </tr>
   </table>
 </body>
