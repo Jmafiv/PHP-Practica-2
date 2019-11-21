@@ -8,11 +8,14 @@
 <body>
   <h3 class="text-center">Se borrará el siguiente artículo de la base de datos:</h3>
   <hr> 
-  Código:
-  Descripción: 
-  Precio de compra: 
-  Precio de venta: 
-  Stock: 
+  <?php 
+  extract($_POST);
+  echo "Código: $codigo
+  <br>Descripción: $descripcion
+  <br>Precio de compra: $precio_compra
+  <br>Precio de venta: $precio_venta
+  <br>Stock: $stock";
+  ?>
   <hr>
   ¿Está seguro?
   <table>

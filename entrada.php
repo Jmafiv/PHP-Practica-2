@@ -9,11 +9,14 @@
 <h3>Entrada de mercancía</h3>
 
 <table>
-  <tr><td>Código:</td><td></td></tr>
-  <tr><td>Descripción:</td><td></td></tr>
-  <tr><td>Precio de compra:</td><td> </td></tr>
-  <tr><td>Precio de venta: </td><td></td></tr>
-  <tr><td>Stock: </td><td></td></tr>
+  <?php
+  extract($_POST);
+  echo "<tr><td>Código:</td><td>$codigo</td></tr>
+  <tr><td>Descripción:</td><td>$descripcion</td></tr>
+  <tr><td>Precio de compra:</td><td>$precio_compra</td></tr>
+  <tr><td>Precio de venta: </td><td>$precio_venta</td></tr>
+  <tr><td>Stock: </td><td>$stock</td></tr>";
+  ?>
   <tr><td>Unidades que entran al almacén:</td><td><input type="number" min="0"  name="unidades" ></td></tr>
   <tr><td><input type="submit" name="accion" value="Entrada"><td><input type="submit"  name="accion" value="Cancelar"></td></tr>
 
