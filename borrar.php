@@ -21,10 +21,27 @@
   <table>
     <tr>
       <td>
+        <form method="post">
+          <?php
+            echo "<input type='hidden' name='codigo' value='$codigo'>";
+          ?>
         <input type="submit" name="accion" value="Eliminar">
         <input type="submit"  name="accion" value="Cancelar">
+        </form>
       </td>
     </tr>
   </table>
+  <?php
+    if(isset($_POST["accion"])){
+      if($_POST["accion"]=="Eliminar"){
+        $conexion=mysqli_connect ("localhost","root","","examen");
+        $conexion->query("DELETE from articulo where codigo = '$codigo'");
+        header("Location:index.php");
+      }
+      if($_POST["accion"]=="Cancelar"){
+        header("Location:index.php");
+      }
+    }
+  ?>
 </body>
 </html>
