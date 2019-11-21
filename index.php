@@ -25,21 +25,23 @@
       {
         extract($fila);
         echo "<td>$codigo</td><td>$descripcion</td><td>$precio_compra</td><td>$precio_venta</td><td>$margen</td><td>$stock</td>";
-    ?>
-      <td><form action="borrar.php" method="post">
-        <button type="submit" >Eliminar</button>
-      </form></td>
-      <td><form action="modificar.php" method="post">
-        <button type="submit" >Modificar</button>
-      </form></td>						
-      <td><form action="entrada.php" method="post">            
-        <button type="submit" >Entrada</button>
-      </form></td>						
-      <td><form action="salida.php" method="post">
-        <button type="submit" >Salida</button>
-      </form></td>					
-  </tr>
-      <?php 
+        echo "<td><form action='borrar.php' method='post'>
+                  <input id='codigo' name='codigo' type='hidden' value='$codigo'>
+                  <button type='submit'>Eliminar</button>
+                </form></td>
+                <td><form action='modificar.php' method='post'>
+                  <input id='codigo' name='codigo' type='hidden' value='$codigo'>
+                  <button type='submit'>Modificar</button>
+                </form></td>						
+                <td><form action='entrada.php' method='post'>
+                  <input id='codigo' name='codigo' type='hidden' value='$codigo'>
+                  <button type='submit'>Entrada</button>
+                </form></td>						
+                <td><form action='salida.php' method='post'>
+                  <input id='codigo' name='codigo' type='hidden' value='$codigo'>
+                  <button type='submit'>Salida</button>
+              </form></td>					
+              </tr>";
         }
       ?>
 
