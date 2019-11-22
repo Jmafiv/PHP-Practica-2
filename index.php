@@ -15,7 +15,7 @@
         $conexion=new mysqli("localhost","root","","examen");
         $conexion->set_charset("utf8");
         //Hacemos la Select SQL
-        $sqlPrincipal="SELECT codigo,descripcion,precio_compra,precio_venta, precio_venta-precio_compra as margen, stock from articulo";
+        $sqlPrincipal="SELECT codigo,descripcion,precio_compra,precio_venta, precio_venta-precio_compra as margen, stock from articulo order by descripcion";
         //En esta conexion hazme esta consulta:
         $resultPrincipal=$conexion->query($sqlPrincipal);
         //Metemos en un array los resultados
@@ -80,13 +80,14 @@
   </tr>
   </table>
   <?php
+
     if(isset($_POST["accion"])){
       extract($_POST);
       $sqlBuscar = "SELECT codigo from articulo where $codigo = codigo";
-      if((int)mysqli_num_rows($conexion->query($sqlBuscar))==0){
+      if(mysqli_num_rows($conexion->query($sqlBuscar))==0){
         $sqlNuevo = "INSERT INTO articulo VALUES ('$codigo','$descripcion','$precio_compra','$precio_venta','$stock')";
         $conexion->query($sqlNuevo);
-        echo '<meta http-equiv="refresh" content="0.1">';
+        echo '<meta http-equiv="refresh" content="0.001">';
       }
       else{
         echo "<p style='color: #D93C34FF;'>Ya existe un artículo con ese código</p>";
