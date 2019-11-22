@@ -69,8 +69,8 @@
       <form method="post" action="index.php">
         <td><input type="text" name="codigo" size="10" required></td>
         <td><input type="text" name="descripcion" required></td>
-        <td><input type="number" min="0" name="precio_compra" step="0.01" style="width: 7em" required></td>
-        <td><input type="number" min="0" name="precio_venta" step="0.01"style="width: 7em" required></td>
+        <td><input type="number" min="0" name="precio_compra" step="any" style="width: 7em" required></td>
+        <td><input type="number" min="0" name="precio_venta" step="any"style="width: 7em" required></td>
         <td></td>
         <td><input type="number" min="0" name="stock" style="width: 7em" required></td>
         <td colspan="4">
