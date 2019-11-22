@@ -36,6 +36,7 @@
       if($_POST["accion"]=="Eliminar"){
         $conexion=mysqli_connect ("localhost","root","","examen");
         $conexion->query("DELETE from articulo where codigo = '$codigo'");
+        mysqli_close($conexion);
         header("Location:index.php");
       }
       if($_POST["accion"]=="Cancelar"){

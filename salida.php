@@ -18,11 +18,35 @@
           <tr><td>Stock: </td><td>$stock</td></tr>";
       ?>
       <form method="post">
-       <tr><td>Unidades que salen del almacén: </td><td><input type="number" min="0" <?php echo "max='$stock'" ?>name="unidades" ></td></tr>
+        <?php
+        echo "<input type='hidden' name='codigo' value='$codigo'>
+              <input type='hidden' name='stock' value='$stock'>
+              <tr><td>Unidades que salen del almacén: </td><td><input type='number' min='0' max='$stock' name='unidades' ></td></tr>";
+        ?>
          <tr><td><input type="submit" name="accion" value="Salida">             
 			<input type="submit"  name="accion" value="Cancelar"></td>
       </form>
     </tr>
   </table>
+  <?php
+    if(isset($_POST["accion"])){
+      if($_POST["accion"]=="Salida"){
+        extract($_POST);
+        $conexion=mysqli_connect ("localhost","root","","examen");
+        if($stock == $unidades){
+          $sql = "DELETE from articulo where codigo = '$codigo'";
+        }
+        else{
+          $sql = "UPDATE articulo SET stock=stock-".$unidades." WHERE codigo = '$codigo'";
+        }
+        $conexion->query($sql);
+        mysqli_close($conexion);
+        header("Location:index.php");
+      }
+      if($_POST["accion"]=="Cancelar"){
+        header("Location:index.php");
+      }
+    }
+  ?>
 </body>
 </html>
